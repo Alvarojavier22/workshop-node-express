@@ -1,14 +1,12 @@
 import express from "express";
 import cors from "cors"
 import dbCollecion from "./db.js";
-import { cryptoEncoder } from "./crypto.js";
 
 const myApi=express()
 
 myApi.use(express.json())
 myApi.use(cors())
 
-const{aesEncrypt,aesDecrypt}=await cryptoEncoder()
 
 const dbUsers=dbCollecion("users")
 
@@ -32,7 +30,6 @@ myApi.get("/users", async (req, res) =>{
 
 myApi.post("/users", async (req, res) =>{
     let userData={... req.body}
-    if (!!userData.password) userData.password=(await aesEncrypt(userData.password)).ciphertext
     console.log({userData})
     let users=await dbUsers.create(userData)
     res.status(200).send(users)
