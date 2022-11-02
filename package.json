@@ -1,0 +1,14 @@
+{
+  "name": "4geeks-nodeworkshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve --prefix functions",
+    "start:functions": "npm run serve:functions --prefix functions"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
