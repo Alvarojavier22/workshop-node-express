@@ -1,7 +1,6 @@
 {
   "name": "4geeks-nodeworkshop",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "npm run serve --prefix functions",
@@ -10,5 +9,17 @@
   "type": "module",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alvarojavier22/workshop-node-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alvarojavier22/workshop-node-express/issues"
+  },
+  "homepage": "https://github.com/Alvarojavier22/workshop-node-express#readme",
+  "description": "",
+  "dependencies": {
+    "firebase-functions": "^4.0.2"
+  }
 }
